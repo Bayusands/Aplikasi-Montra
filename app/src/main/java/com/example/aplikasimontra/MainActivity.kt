@@ -12,25 +12,15 @@ class MainActivity : AppCompatActivity(), View.OnClickListener {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val btnLogin : Button = findViewById(R.id.btnimp)
-        btnLogin.setOnClickListener(this)
-
-        val btnRegis : Button = findViewById(R.id.btnexp)
-        btnRegis.setOnClickListener(this)
+        val btnMasuk : Button = findViewById(R.id.btnin)
+        btnMasuk.setOnClickListener(this)
     }
 
     override fun onClick(v: View) {
         when(v.id){
-            R.id.btnimp -> {
-                val Login = Intent(this@MainActivity, BerandaActivity::class.java)
-                startActivity(Login)
-            }
-
-            R.id.btnexp -> {
-                val url = "https://www.youtube.com/?hl=id&gl=ID"
-                val web = Intent(Intent.ACTION_VIEW)
-                web.setData(Uri.parse(url))
-                startActivity(web)
+            R.id.btnin -> {
+                val Masuk = Intent(this@MainActivity, BerandaActivity::class.java)
+                startActivity(Masuk)
             }
         }
     }

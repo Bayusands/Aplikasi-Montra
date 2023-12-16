@@ -51,10 +51,8 @@ class BerandaActivity : AppCompatActivity(), View.OnClickListener {
             }
 
             R.id.cardBuang -> {
-                val url = "https://www.youtube.com/?hl=id&gl=ID"
-                val web = Intent(Intent.ACTION_VIEW)
-                web.setData(Uri.parse(url))
-                startActivity(web)
+                val Klasifikasi = Intent(this@BerandaActivity, KlasifikasiActivitty::class.java)
+                startActivity(Klasifikasi)
             }
 
             R.id.cardKomunitas -> {
